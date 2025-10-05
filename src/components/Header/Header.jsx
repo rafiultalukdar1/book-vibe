@@ -21,8 +21,8 @@ const Header = () => {
                     </nav>
                 </div>
                 <div className='flex flex-col gap-[12px] px-[15px]'>
-                    <button className='nav-button bg-[#23BE0A] w-[100]'>Sign In</button>
-                    <button className='nav-button bg-[#59C6D2] w-[100]'>Sign Up</button>
+                    <button className='nav-button bg-[#23BE0A] w-[100%]'>Sign In</button>
+                    <button className='nav-button bg-[#59C6D2] w-[100%]'>Sign Up</button>
                 </div>
             </div>
 
