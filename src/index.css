@@ -1,4 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+body {
+  font-family: "Work Sans", sans-serif;
+}
 
+.playfair-font {
+  font-family: "Playfair Display", serif;
+}
 
+@import "tailwindcss";
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.nav-items {
+  @apply text-[rgba(19,19,19,0.80)] text-[18px] font-[600] py-[12px] px-[16px];
+}
+
+.nav-bar a.active {
+  color: #23BE0A;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 1px solid #23BE0A;
+}
+
+.mobile-nav a {
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(19, 19, 19, 0.80);
+  padding: 0 15px;
+  border-left: 3px solid transparent;
+}
+
+.mobile-nav a.active {
+  border-color: #23BE0A;
+  color: #23BE0A;
+}
+
+.nav-button {
+  @apply text-white text-[18px] font-[600] py-[10px] px-[18px] rounded-[8px] cursor-pointer;
+}
