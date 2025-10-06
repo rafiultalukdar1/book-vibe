@@ -5,6 +5,7 @@ import Root from '../pages/Root/Root';
 import ErrorPage from '../pages/ErrorPage/ErrorPage';
 import HomePage from '../pages/HomePage/HomePage';
 import BookDetails from '../pages/BookDetails/BookDetails';
+import ListedBooks from '../pages/ListedBooks/ListedBooks';
 
 
 export const router = createBrowserRouter([
@@ -19,7 +20,8 @@ export const router = createBrowserRouter([
         },
         {
           path: 'listed_books',
-          element: <h1 className='text-2xl'>Listed Books</h1>
+          Component: ListedBooks,
+          loader: () => fetch('/booksData.json')
         },
         {
           path: 'Pages_to_read',

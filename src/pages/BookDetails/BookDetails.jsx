@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData, useParams } from 'react-router';
+import { addStoreDB } from '../../utility/script';
 
 const BookDetails = () => {
 
@@ -8,7 +9,11 @@ const BookDetails = () => {
     const data = useLoaderData();
     const singleData = data.find(book => book.bookId === bookId);
     
-    const {image, bookName, author, category, review, tags, totalPages, publisher, yearOfPublishing, rating} = singleData
+    const {image, bookName, author, category, review, tags, totalPages, publisher, yearOfPublishing, rating} = singleData;
+
+    const handeRead = id => {
+        addStoreDB(id);
+    }
     
   
 
@@ -37,7 +42,7 @@ const BookDetails = () => {
                             <li className='text-[16px] text-[rgba(19,19,19,0.7)]'>Rating: <span className='text-[#131313] font-[700]'>{rating}</span></li>
                         </ul>
                         <div className='flex items-center gap-[16px]'>
-                            <button className='text-[18px] text-[#131313] font-semibold py-[12px] px-[22px] rounded-[8px] border border-[rgba(19,19,19,0.3)] cursor-pointer bg-white'>Read</button>
+                            <button onClick={() => handeRead(id)} className='text-[18px] text-[#131313] font-semibold py-[12px] px-[22px] rounded-[8px] border border-[rgba(19,19,19,0.3)] cursor-pointer bg-white'>Read</button>
                             <button className='text-[18px] text-white font-semibold py-[12px] px-[22px] rounded-[8px] bg-[#50B1C9] cursor-pointer'>Wishlist</button>
                         </div>
                     </div>
